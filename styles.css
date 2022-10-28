@@ -80,9 +80,6 @@ button:hover, input[type = 'color']:hover {
   user-select: none;
 }
 
-[class^='container-']:hover {
-  background-color: black;
-}
 
 @media (max-width: 900px) {
   .container {

@@ -31,7 +31,7 @@ colorPicker.oninput = (e) => setCurrentColor(e.target.value);
 colorBtn.onclick = () => setCurrentMode('color');
 rainbowBtn.onclick = () => setCurrentMode('rainbow');
 eraserBtn.onclick = () => setCurrentMode('eraser');
-clearBtn.onclick = () => realoadContainer();
+clearBtn.onclick = () => reloadContainer();
 sizePicker.onmousemove = (e) => updateSizeValue(e.target.value);
 sizePicker.onchange = (e) => changeSize(e.target.value);
 
@@ -39,19 +39,6 @@ let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
-// for (let i=1; i<=16*16; i++) {
-//   const div = document.createElement('div');
-//   div.className = `div-${i}`;
-//   div.addEventListener('mouseover', () => {
-//     if (mouseDown) {
-//       div.style.backgroundColor = 'black';
-//     }
-//   })
-//   div.addEventListener('mousedown', () => {
-//     div.style.backgroundColor = 'black';
-//   })
-//   container.appendChild(div);
-// }
 
 function changeSize(value) {
   setCurrentSize(value);
