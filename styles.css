@@ -1,0 +1,107 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: aliceblue;
+}
+
+button, input {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  font-size: inherit;
+  outline: none;
+}
+
+button {
+  border: 1px solid rgb(49, 49, 49);
+  border-radius: 5px;
+  padding: 8px 16px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+button:not(#clearBtn):focus {
+  background-color: rgb(49, 49, 49);
+  color:aliceblue;
+}
+
+button:hover, input[type = 'color']:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+}
+
+.header {
+  padding-top: 20px;
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas-size {
+  font-size: 22px;
+  margin-bottom: -10px;
+}
+
+
+.container {
+  display: grid;
+  height: 600px;
+  width: 600px;
+  background-color:rgb(255, 255, 255);
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  
+}
+
+[class^='container-'] {
+  border: 1px solid rgb(156, 156, 156);
+  user-select: none;
+}
+
+[class^='container-']:hover {
+  background-color: black;
+}
+
+@media (max-width: 900px) {
+  .container {
+    height: 480px;
+    width: 480px;
+  }
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .main {
+    flex-direction: column-reverse;
+  }
+
+  .container {
+    width: 300px;
+    height: 300px;
+  }
+}
