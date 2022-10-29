@@ -6,8 +6,8 @@ let currentSize = DEFAULT_SIZE;
 let currentColor = 'black';
 
 function setCurrentMode(newMode) {
-  currentMode = newMode;
   activateBtn(newMode);
+  currentMode = newMode;
 }
 
 function setCurrentColor(newColor) {

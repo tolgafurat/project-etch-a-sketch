@@ -3,6 +3,11 @@ body {
   background-color: aliceblue;
 }
 
+p {
+  margin-bottom: auto;
+  font-size: 20px;
+}
+
 button, input {
   cursor: pointer;
   font-family: inherit;
@@ -19,19 +24,38 @@ button {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  background-color: aliceblue;
+  color:rgb(49, 49, 49);
 }
 
-button:not(#clearBtn):focus {
+button.active {
   background-color: rgb(49, 49, 49);
   color:aliceblue;
 }
 
-button:hover, input[type = 'color']:hover {
+button, 
+input[type = 'color'] {
+  transition: transform 0.1s ease-in-out;
+  -webkit-transition: transform 0.1s ease-in-out;
+  -moz-transition: transform 0.1s ease-in-out;
+  -ms-transition: transform 0.1s ease-in-out;
+  -o-transition: transform 0.1s ease-in-out;
+}
+
+button:hover, 
+input[type = 'color']:hover {
   transform: scale(1.03);
   -webkit-transform: scale(1.03);
   -moz-transform: scale(1.03);
   -ms-transform: scale(1.03);
   -o-transform: scale(1.03);
+}
+
+input[type = 'color'] {
+  width: 70px;
+  height: 70px;
+  border: none;
+  padding: 0;
 }
 
 .header {
@@ -46,7 +70,10 @@ button:hover, input[type = 'color']:hover {
 .main {
   display: flex;
   align-items: center;
-  gap: 50px;
+  justify-content: flex-start;
+  max-width: 1200px;
+  gap: 150px;
+  margin: 0 auto;
 
 }
 
@@ -70,8 +97,6 @@ button:hover, input[type = 'color']:hover {
   height: 600px;
   width: 600px;
   background-color:rgb(255, 255, 255);
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
   
 }
 
